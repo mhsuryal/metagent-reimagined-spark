@@ -5,31 +5,31 @@ const personas = [
     icon: Briefcase,
     title: "Employee",
     description: "Automate repetitive tasks so you can focus on real work.",
-    gradient: "from-primary to-[hsl(200_80%_50%)]",
+    gradient: "from-primary to-[hsl(200_80%_45%)]",
   },
   {
     icon: Code,
     title: "Developer",
     description: "Build and integrate AI agents into your applications seamlessly.",
-    gradient: "from-[hsl(200_80%_50%)] to-accent",
+    gradient: "from-[hsl(200_80%_45%)] to-accent",
   },
   {
     icon: Lightbulb,
     title: "Founder",
     description: "Scale your business operations with intelligent automation.",
-    gradient: "from-accent to-[hsl(320_80%_60%)]",
+    gradient: "from-accent to-[hsl(320_70%_55%)]",
   },
   {
     icon: Bot,
     title: "Enterprise",
     description: "Deploy auditable, compliant AI agents across your organization.",
-    gradient: "from-[hsl(320_80%_60%)] to-primary",
+    gradient: "from-[hsl(320_70%_55%)] to-primary",
   },
 ];
 
 const PersonasSection = () => {
   return (
-    <section id="personas" className="py-24 relative overflow-hidden">
+    <section id="personas" className="py-24 relative overflow-hidden bg-secondary/30">
       {/* Background elements */}
       <div className="absolute top-0 left-1/4 w-72 h-72 bg-primary/5 rounded-full blur-[100px]" />
       <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-accent/5 rounded-full blur-[80px]" />
@@ -37,10 +37,10 @@ const PersonasSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="text-primary text-sm font-medium tracking-wider uppercase mb-4 block">
+          <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
             Who We Build For
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
             Choose Your <span className="text-gradient">Persona</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -53,14 +53,11 @@ const PersonasSection = () => {
           {personas.map((persona, index) => (
             <div
               key={persona.title}
-              className="group relative glass rounded-2xl p-6 hover:bg-secondary/30 transition-all duration-500 cursor-pointer"
+              className="group relative bg-card rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer border border-border hover:border-primary/30"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Gradient border on hover */}
-              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${persona.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl`} />
-              
               {/* Icon */}
-              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${persona.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${persona.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
                 <persona.icon className="w-6 h-6 text-primary-foreground" />
               </div>
 

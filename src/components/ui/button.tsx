@@ -9,15 +9,15 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_0_30px_hsl(175_80%_50%/0.4)]",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline: "border border-border bg-transparent hover:bg-secondary hover:text-secondary-foreground",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-secondary hover:text-secondary-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-primary text-primary-foreground font-semibold hover:shadow-[0_0_40px_hsl(175_80%_50%/0.5)] hover:scale-105",
-        glass: "bg-secondary/30 backdrop-blur-md text-foreground hover:bg-secondary/50 border border-border/50",
-        gradient: "bg-gradient-to-r from-primary via-[hsl(200_80%_50%)] to-accent text-primary-foreground hover:opacity-90 hover:shadow-[0_0_30px_hsl(175_80%_50%/0.3)]",
+        hero: "bg-primary text-primary-foreground font-semibold shadow-lg hover:shadow-xl hover:shadow-primary/20 hover:scale-105",
+        glass: "bg-card/80 backdrop-blur-md text-foreground hover:bg-card border border-border shadow-sm hover:shadow-md",
+        gradient: "bg-gradient-to-r from-primary via-[hsl(200_80%_45%)] to-accent text-primary-foreground shadow-md hover:shadow-lg hover:opacity-90",
       },
       size: {
         default: "h-10 px-4 py-2",

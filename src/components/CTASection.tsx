@@ -7,12 +7,12 @@ const CTASection = () => {
       {/* Gradient background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px]" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="glass rounded-3xl p-12 md:p-16 text-center max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+        <div className="bg-card rounded-3xl p-12 md:p-16 text-center max-w-4xl mx-auto shadow-2xl border border-border">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
             Ready to Build Your{" "}
             <span className="text-gradient">Intelligent Agent</span>?
           </h2>

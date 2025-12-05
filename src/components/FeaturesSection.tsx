@@ -35,17 +35,17 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden bg-secondary/30">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-mesh opacity-50" />
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Section header */}
         <div className="max-w-3xl mb-16">
-          <span className="text-primary text-sm font-medium tracking-wider uppercase mb-4 block">
+          <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
             Why Metagent
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-foreground">
             We're not building visual tricks.{" "}
             <span className="text-gradient">We're developing cognitive agents</span>{" "}
             that interpret context, anticipate needs, and work as true partners.
@@ -57,7 +57,7 @@ const FeaturesSection = () => {
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className="group p-6 rounded-2xl border border-border/50 bg-card/30 hover:bg-card/60 hover:border-primary/30 transition-all duration-300"
+              className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300"
             >
               <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors duration-300">
                 <feature.icon className="w-5 h-5 text-primary" />
@@ -77,8 +77,8 @@ const FeaturesSection = () => {
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
             At Metagent Studio, we don't build generic AI. We engineer adaptive, safe, and tool-native agents—systems that understand context, reason reliably, and take actions that matter.
           </p>
-          <div className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors cursor-pointer group">
-            <span className="font-medium">Explore our technology</span>
+          <div className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors cursor-pointer group font-medium">
+            <span>Explore our technology</span>
             <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

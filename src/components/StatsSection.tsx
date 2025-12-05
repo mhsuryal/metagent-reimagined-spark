@@ -75,12 +75,12 @@ const StatsSection = () => {
   return (
     <section className="py-20 relative">
       {/* Glowing line */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       
       <div className="container mx-auto px-6">
-        <div className="glass rounded-3xl p-8 md:p-12">
+        <div className="bg-card rounded-3xl p-8 md:p-12 shadow-xl border border-border">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
               The Intelligence Framework Behind{" "}
               <span className="text-gradient">Human-like Metagents</span>
             </h2>
@@ -99,7 +99,7 @@ const StatsSection = () => {
       </div>
 
       {/* Glowing line */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
     </section>
   );
 };
