@@ -50,34 +50,37 @@ const PersonasSection = () => {
 
         {/* Persona cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {personas.map((persona, index) => (
-            <div
-              key={persona.title}
-              className="group relative bg-card rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer border border-border hover:border-primary/30"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {/* Icon */}
-              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${persona.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
-                <persona.icon className="w-6 h-6 text-primary-foreground" />
-              </div>
+          {personas.map((persona, index) => {
+            const IconComponent = persona.icon;
+            return (
+              <div
+                key={persona.title}
+                className="group relative bg-card rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer border border-border hover:border-primary/30"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {/* Icon */}
+                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${persona.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
+                  <IconComponent className="w-6 h-6 text-primary-foreground" />
+                </div>
 
-              {/* Content */}
-              <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
-                {persona.title}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {persona.description}
-              </p>
+                {/* Content */}
+                <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                  {persona.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {persona.description}
+                </p>
 
-              {/* Arrow indicator */}
-              <div className="mt-4 flex items-center text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="text-sm font-medium">Learn more</span>
-                <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                {/* Arrow indicator */}
+                <div className="mt-4 flex items-center text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-sm font-medium">Learn more</span>
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -8,9 +8,9 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-mesh" />
       
       {/* Floating orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/8 rounded-full blur-[100px] animate-float" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/6 rounded-full blur-[80px] animate-float" style={{ animationDelay: '-3s' }} />
-      <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-[hsl(200_80%_50%/0.06)] rounded-full blur-[60px] animate-pulse-slow" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] animate-float" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-[80px] animate-float" style={{ animationDelay: '-3s' }} />
+      <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-[hsl(200_80%_50%/0.08)] rounded-full blur-[60px] animate-pulse-slow" />
 
       {/* Grid pattern overlay */}
       <div 
