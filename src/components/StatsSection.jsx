@@ -6,16 +6,16 @@ const stats = [
   { value: 10, suffix: "x", label: "Faster domain adaptation" },
 ];
 
-const useCountUp = (end: number, duration: number = 2000, start: boolean = false) => {
+const useCountUp = (end, duration = 2000, start = false) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     if (!start) return;
     
-    let startTime: number;
-    let animationFrame: number;
+    let startTime;
+    let animationFrame;
 
-    const animate = (timestamp: number) => {
+    const animate = (timestamp) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
       
@@ -33,9 +33,9 @@ const useCountUp = (end: number, duration: number = 2000, start: boolean = false
   return count;
 };
 
-const StatCard = ({ value, suffix, label, index }: { value: number; suffix: string; label: string; index: number }) => {
+const StatCard = ({ value, suffix, label, index }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef(null);
   const count = useCountUp(value, 2000, isVisible);
 
   useEffect(() => {
