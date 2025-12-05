@@ -7,13 +7,13 @@ const Footer = () => {
   };
 
   return (
-    <footer className="border-t border-border py-16">
+    <footer className="border-t border-border py-16 bg-secondary/30">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           {/* Logo and description */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-md">
                 <span className="text-primary-foreground font-bold text-sm">M</span>
               </div>
               <span className="text-foreground font-semibold text-lg">Metagent</span>

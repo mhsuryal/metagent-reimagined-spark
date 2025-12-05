@@ -8,13 +8,13 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-mesh" />
       
       {/* Floating orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] animate-float" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-[80px] animate-float" style={{ animationDelay: '-3s' }} />
-      <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-[hsl(200_80%_50%/0.1)] rounded-full blur-[60px] animate-pulse-slow" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/8 rounded-full blur-[100px] animate-float" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/6 rounded-full blur-[80px] animate-float" style={{ animationDelay: '-3s' }} />
+      <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-[hsl(200_80%_50%/0.06)] rounded-full blur-[60px] animate-pulse-slow" />
 
       {/* Grid pattern overlay */}
       <div 
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px),
                            linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
@@ -25,13 +25,13 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-8 animate-fade-in">
+          <div className="inline-flex items-center gap-2 bg-card rounded-full px-4 py-2 mb-8 animate-fade-in shadow-md border border-border">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm text-muted-foreground">Next-Gen AI Agents Platform</span>
+            <span className="text-sm text-muted-foreground font-medium">Next-Gen AI Agents Platform</span>
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in text-foreground" style={{ animationDelay: '0.1s' }}>
             Build Intelligent{" "}
             <span className="text-gradient">Agents</span>
             <br />
@@ -56,11 +56,11 @@ const HeroSection = () => {
           </div>
 
           {/* Trust indicators */}
-          <div className="mt-16 pt-8 border-t border-border/50 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className="mt-16 pt-8 border-t border-border animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <p className="text-sm text-muted-foreground mb-4">Trusted by innovative teams worldwide</p>
-            <div className="flex items-center justify-center gap-8 opacity-50">
+            <div className="flex items-center justify-center gap-8 opacity-60">
               {['TechCorp', 'InnovateLab', 'FutureAI', 'DataSync'].map((company) => (
-                <span key={company} className="text-muted-foreground font-medium">{company}</span>
+                <span key={company} className="text-muted-foreground font-semibold">{company}</span>
               ))}
             </div>
           </div>
